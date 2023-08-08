@@ -1,5 +1,40 @@
 // export default class Artist {
 
+function drawShapes(params) {//c,data,shape
+    let ctx = params.c.getContext('2d')
+    let cl = params.data
+    ctx.beginPath()
+    // ctx.clearRect(0, 0, params.c.width, params.c.height)
+    ctx.fillStyle = params.bgColor
+    // ctx.rect(0, -tr.f, params.c.width, params.c.height + tr.f)
+    // ctx.fill()
+    ctx.stroke()
+    ctx.closePath()
+    let strokeStyle = params.strokeStyle //? params.strokeStyle : seriesType == 'Parent' ? "green" : "blue"
+    switch (params.shape) {
+        case 'Circle':
+            drawCircle.bind(this)(ctx, cl, strokeStyle)
+            break;
+        case 'Line':
+            drawLines.bind(this)(ctx, cl, strokeStyle)
+            break;
+        case "Box":
+            // ctx.translate(1, 1000)
+            drawBox.bind(this)(ctx, cl, strokeStyle)
+            break;
+        // case 'LineCircle':
+        //     LineCircle.bind(this)(params)
+        //     break;
+        // case 'RandomBox':
+        //     randomBox.bind(this)(params)
+        //     break;
+
+        default:
+            break;
+    }
+    // mctx.clearRect(0, 0, params.c.width, params.c.height)
+}
+
 function drawBox(dctx, list, strokeStyle) {
     dctx.beginPath()
     dctx.strokeStyle = strokeStyle
