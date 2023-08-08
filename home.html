@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="home.js"></script>
+    <script src="Artist.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div id="div_panel" class="hoverPanel">
+            <table id="tbl_cords">
+                <tr>
+                    <td>
+                        <label class="lbl_cords">Idx: </label>
+                        <label id="lbl_idx" class="lbl_val"></label>
+                    </td>
+                    <td>
+                        <label class="lbl_cords">X: </label>
+                        <label id="lbl_x" class="lbl_val"></label>
+                    </td>
+                    <td class="lbl_cords">Y:
+                        <label id="lbl_y" class="lbl_val"></label>
+                    </td>
+                    <td>
+                        <label id="lblw_x1" class="lbl_cords">W: </label>
+                        <label id="lbl_val_wx" class="lbl_val"></label>
+                    </td>
+                    <td>
+                        <label id="lblh_y1" class="lbl_cords">H: </label>
+                        <label id="lbl_val_hy" class="lbl_val"></label>
+                    </td>
+
+                    <td class="hideEle" id="td_wh">
+                        <label id="lbl_w" class="lbl_cords"> W: </label>
+                        <label id="lbl_val_w" class="lbl_val"></label>
+                        <label id="lbl_h" class="lbl_cords">H: </label>
+                        <label id="lbl_val_h" class="lbl_val"></label>
+                    </td>
+
+                </tr>
+
+            </table>
+
+            <div id="div_shape" class="div_shape row">
+                <div>
+                    <button id="btnTemp">Temp</button>
+                </div>
+                <div class="row">
+                    <div class="row">
+                        <label for="inp_parent"> Parnet</label>
+                        <input type="radio" id="inp_parent" name="relation" checked>
+                    </div>
+                    <div class="row">
+                        <label for="inp_child">Child</label>
+                        <input type="radio" id="inp_child" name="relation">
+                    </div>
+                </div>
+                <select name="shape" id="sel_shape">
+                    <option value=""></option>
+                    <option value="Circle">Circle</option>
+                    <option value="Line">Line</option>
+                    <option value="LineCircle">LineCircle</option>
+                    <option value="Box" selected>Box</option>
+                    <option value="RandomBox">Random Box</option>
+                </select>
+                <div>
+                    <button id="btn_draw">Draw</button>
+                </div>
+            </div>
+        </div>
+        <canvas id="mainCanvas" height="400" width="1900" class="maincanvas"></canvas>
+        <canvas id="ghostCanvas" height="400" width="1900" class="maincanvas"></canvas>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+.maincanvas {
+    /* margin-top: 40px; */
+    border: 1px solid gray;
+    /* background-color: #e4e4e4; */
+}
+
+.div_shape {
+    position: absolute;
+    right: 10;
+    /* width: 100px; */
+}
+
+.div_shape select {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+}
+
+.hoverPanel {
+    width: 100%;
+    border: 1px solid gray;
+    height: 30px;
+    display: inline-flex;
+    position: relative;
+}
+
+.lbl_cords {
+    font-size: small;
+}
+
+.lbl_val {
+    font-size: medium;
+    margin-right: 10px;
+    width: 100px;
+    display: inline-block;
+}
+
+.hideEle {
+    visibility: collapse;
+}
