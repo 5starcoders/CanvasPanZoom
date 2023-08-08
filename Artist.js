@@ -1,8 +1,8 @@
 // export default class Artist {
 
 function drawShapes(paramsObj) {//c,data,shape
-    let ctx = params.c.getContext('2d')
-    let cl = params.data
+    let ctx = paramsObj.c.getContext('2d')
+    let cl = paramsObj.data
 
     let params = Object.assign({}, { bgColor: "transparent", strokeStyle: 'black', shape: 'Box' }, paramsObj)
     
